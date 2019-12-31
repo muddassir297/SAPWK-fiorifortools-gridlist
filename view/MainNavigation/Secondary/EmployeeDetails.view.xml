@@ -1,0 +1,65 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.uxap" 
+	xmlns:layout="sap.ui.layout" 
+	xmlns:m="sap.m" 
+	xmlns:forms="sap.ui.layout.form" 
+	xmlns:core="sap.ui.core" controllerName="UI5FioriForTools.controller.MainNavigation.Secondary.EmployeeDetails" height="100%" async="true">
+	<ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true">
+		<headerTitle>
+			<ObjectPageHeader objectImageURI="{ImageURI}" objectTitle="{FirstName} {LastName}" objectImageShape="Circle" objectImageAlt="{FirstName} {LastName}" objectSubtitle="Employee ID: {EmployeeID}" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
+				<navigationBar>
+					<m:Bar>
+						<m:contentLeft>
+							<m:Button icon="sap-icon://nav-back" tooltip="Back" press="onNavBack"></m:Button>
+						</m:contentLeft>
+						<m:contentMiddle>
+							<m:Text text="Object item"/>
+						</m:contentMiddle>
+					</m:Bar>
+				</navigationBar>
+			</ObjectPageHeader>
+		</headerTitle>
+
+		<headerContent>
+			<layout:VerticalLayout>
+				<m:Label text="Home Phone: {HomePhone}"/>
+			</layout:VerticalLayout>
+
+			<!-- layout:VerticalLayout>
+				<m:Label text="Hello! I am Tim and I use UxAP"/>
+				<m:VBox height="63px">
+					<m:Label text="Achieved goals"/> <m:ProgressIndicator percentValue="30" displayValue="30%" showValue="true" state="None"/>
+				</m:VBox>
+			</layout:VerticalLayout>
+
+			<layout:VerticalLayout>
+				<m:Label text="San Jose, USA"/>
+			</layout:VerticalLayout -->
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection id="detailSection" title="Personal Details">
+				<subSections>
+					<ObjectPageSubSection id="personalSectionSS1" title="Personal Info">
+						<blocks>
+							<forms:SimpleForm layout="ColumnLayout" width="100%">
+								<core:Title text="Address"/>
+								<m:Label text="Street"/>
+								<m:Text text="{Address}"/>
+								<m:Label text="Postal Code"/>
+								<m:Text text="{PostalCode}"/>
+								<m:Label text="City"/>
+								<m:Text text="{City}"/>
+								<m:Label text="Region"/>
+								<m:Text text="{Region}"/>
+								<m:Label text="Country"/>
+								<m:Text text="{Country}"/>
+							</forms:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+
+	</ObjectPageLayout>
+</mvc:View>

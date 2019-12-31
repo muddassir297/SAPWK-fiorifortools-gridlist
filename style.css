@@ -1,0 +1,10 @@
+.customCellImageBackground {
+    color: #ffffff;
+    background-image: url(images/header.jpg);
+    background-size: 100% auto;
+    background-position: 0 20%;
+  }
+
+  .customCellImageBackground h2, .customCellImageBackground span {
+    color: #ffffff;
+  }
